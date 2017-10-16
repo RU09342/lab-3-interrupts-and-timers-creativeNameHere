@@ -11,7 +11,13 @@ GEN_CMDS__FLAG :=
 
 ORDERED_OBJS += \
 "./main.obj" \
+"../FR6989/Debug/main.obj" \
+"./FR6989/main.obj" \
+"../G2553/Debug/main.obj" \
+"./G2553/main.obj" \
 "../lnk_msp430fr5994.cmd" \
+"../FR6989/lnk_msp430fr6989.cmd" \
+"../G2553/lnk_msp430g2553.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibmpu_init.a \
 -llibmath.a \
@@ -25,7 +31,15 @@ RMDIR := RMDIR /S/Q
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir_vars.mk
+-include FR6989/Debug/subdir_vars.mk
+-include FR6989/subdir_vars.mk
+-include G2553/Debug/subdir_vars.mk
+-include G2553/subdir_vars.mk
 -include subdir_rules.mk
+-include FR6989/Debug/subdir_rules.mk
+-include FR6989/subdir_rules.mk
+-include G2553/Debug/subdir_rules.mk
+-include G2553/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -155,8 +169,8 @@ FR5994BI.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" 
-	-$(RM) "main.d" 
+	-$(RM) "main.obj" "FR6989\main.obj" "G2553\main.obj" 
+	-$(RM) "main.d" "FR6989\main.d" "G2553\main.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

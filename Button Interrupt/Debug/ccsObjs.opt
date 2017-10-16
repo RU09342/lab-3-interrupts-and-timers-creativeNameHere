@@ -1,1 +1,1 @@
-"./main.obj" "../lnk_msp430fr5994.cmd" -llibmpu_init.a -llibmath.a -llibc.a 
+"./main.obj" "../FR6989/Debug/main.obj" "./FR6989/main.obj" "../G2553/Debug/main.obj" "./G2553/main.obj" "../lnk_msp430fr5994.cmd" "../FR6989/lnk_msp430fr6989.cmd" "../G2553/lnk_msp430g2553.cmd" -llibmpu_init.a -llibmath.a -llibc.a 

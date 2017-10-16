@@ -112,8 +112,4 @@ PDE_DEPS__QUOTED :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 . \
-FR6989/Debug \
-FR6989 \
-G2553/Debug \
-G2553 \
 
